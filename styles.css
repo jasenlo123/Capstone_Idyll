@@ -61,6 +61,13 @@ p, .article-body {
   max-width: 100vw;
 }
 
+.article-body .hed {
+  font-size: 3rem;
+  line-height: 3rem;
+  box-shadow: inset 0 -0.8rem 0 steelblue;
+  width: 100%;
+}
+
 .dek {
   margin: 0;
   display: block;
@@ -83,14 +90,14 @@ a, a:visited {
   cursor: pointer;
   text-decoration: none;
   /*border-bottom: 1px solid #EAE7D6;*/
-  box-shadow: inset 0 -4px 0 #EAE7D6;
-  transition: box-shadow 0.25s ease-out;
+  box-shadow: inset 0 -0.2rem 0 steelblue;
+  transition: box-shadow 0.5s ease-out;
 }
 
 a:hover {
   color: black;
   /*background: #EAE7D6;*/
-  box-shadow: inset 0 -20px 0 #EAE7D6;
+  box-shadow: inset 0 -1.5rem 0 #EAE7D6;
 }
 
 a tspan {
