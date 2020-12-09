@@ -1,0 +1,66 @@
+[meta title:"Capstone_Idyll" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"Is the South China Morning Post Different Nowadays? "
+  subtitle:"A data-driven investigation into how Alibaba's 2016 acquistion of Hong Kong's newspaper of record has changed the SCMP"
+  author:"Jasen Lo"
+  authorLink:"https://idyll-lang.org"
+  date:`(new Date()).toDateString()`
+   /]
+
+
+
+[section className:"article-body"]
+Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
+ 
+Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+
+Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
+ 
+Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+
+
+[/section]
+
+[data name:"ratio_data" source:"ratio_data.csv" /]
+[var name:"scrollerIndex" value:0 /]
+[Scroller currentStep:scrollerIndex]
+
+  [Graphic style:`{padding: 50}`]
+      [d3RatioLineChart data:ratio_data year:`2015+scrollerIndex`/]
+  [/Graphic]
+
+  [Step]
+  ### This chart shows the ratio of SCMP news articles written about China versus Hong Kong from 2012 - 2015. 
+  ### The ratio hovers around 0.5 in this time period, meaning that for every 1 story written by SCMP about China, SCMP produced 2 articles about Hong Kong. [/Step]
+  [Step]### Alibaba acquired SCMP in 2016. There was no noticable difference in the volume of stories written about China compared to Hong Kong as the ratio was consistent with previous years. [/Step]
+  [Step]### The next full year since Alibaba's acquition, the number of China stories from the SCMP rose significantly. [/Step]
+  [Step]### From 2017 - 2020, the ratio of news articles written about China versus Hong Kong is around 0.7. 
+  ### This means that SCMP wrote 7 news articles about China for every 10 news articles written about Hong Kong.  [/Step]
+  [Step]### The trend holds continues to hold until today. The SCMP is shifting more of its editorial content production on China than Hong Kong.[/Step]
+[/Scroller]
+
+
+[section className:"article-body"]
+Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
+ 
+Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+
+Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
+ 
+Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+
+  [var name:"myVar" value:10 /]
+  [Range value:myVar min:0 max:100 /]
+  [Display value:myVar /]
+
+[/section]
+
+[data name:"tagged_data" source:"tagged_data.json" /]
+[var name:"scrollerIndex1" value:0 /]
+[Graphic fullWidth:true style:`{padding: 0}`]
+
+  [d3TagsLineChart data:tagged_data/]
+[/Graphic]
+
