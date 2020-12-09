@@ -112,6 +112,20 @@ a tspan {
   margin-top: -10vh;
 }
 
+.quote .content {
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 2em;
+  margin-bottom: 50px;
+}
+
+.quote .attribution {
+  font-family: 'et-book';
+  font-size: 1.2rem;
+  font-weight: bold;
+
+}
+
 pre {
   margin: 25px 0;
   width: 100%;

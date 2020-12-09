@@ -2,7 +2,7 @@
 
 [Header
   fullWidth:true
-  title:"Is the South China Morning Post Different Nowadays? "
+  title:"How is the South China Morning Post Different Nowadays? "
   subtitle:"A data-driven investigation into how Alibaba's 2016 acquistion of Hong Kong's newspaper of record has changed the SCMP"
   author:"Jasen Lo"
   authorLink:"https://idyll-lang.org"
@@ -12,17 +12,41 @@
 
 
 [section className:"article-body"]
-Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
- 
-Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+The *South China Morning Post* (SCMP) is an award-winning English-language newspaper based in Hong Kong. Founded in 1903, SCMP has a storied history as one of the most influential newspapers in Asia as it was not only the paper of record for Hong Kong, but also the English-language paper of record for reporting on China. During the Cold-War era when China was closed off to the rest of the world, the Post was one of the few sources of English-medium information available about happenings in China. 
 
-Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
- 
-Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+For decades, SCMP has reported on topics such as political scandals and human-rights abuses that Chinese state media are forbidden to cover, even after the 1997 handover of Hong Kong from the United Kingdom to China. Combined with Hong Kong's position as the gateway of business and finance into China, SCMP was considered and continues to be viewed as the public voice of Hong Kong on Chinese affairs, and thus a relevant read for anyone one with an interest in China.
 
+// intro quotes data, aside for quote display component
+// that randomly chooses quotes from quotes data
+[data name:"quotes" source:"quotes.csv" /]
+[Aside]
+  [Quote quotes:quotes running:`true` /]
+[/Aside]
 
+SCMP was owned by media tycoon Rupert Murdoch during the early 1990s, and conducted exclusive and aggressive reportage on China. Since then, the ownership of the Post has 
+[a href:'https://www.asiasentinel.com/p/alibaba-buys-south-china-morning-post-counter-western-bias']
+changed hands twice
+[/a] to owners that are much less inclined to potentially negative reportage of the Chinese government due to extensive business interests in China. Kerry Group, controlled by Malaysian tycoon Robert Kuok, acquired SCMP in 1993, while Chinese multinational technology company Alibaba Group, led by founder Jack Ma, took over the ownership of the Post in April, 2016. 
+
+Following Kerry Group's acquisition, 
+[a href:'https://www.washingtonpost.com/archive/opinions/2002/05/04/why-i-was-fired-in-hong-kong/e0d5e772-4041-49be-b80b-3970b7e19640/']  journalists and editors critical of Beijing gradually left or were forced out of SCMP 
+[/a] as the paper's reporting became less critical of Chinese leadership and the paper was 
+[a href:'https://qz.com/1027234/how-alibaba-baba-is-reinventing-the-south-china-morning-post-scmp-a-114-year-old-newspaper-in-hong-kong/'] accused
+[/a] of self-censorship and toeing a pro-Beijing line. However, the change in editorial slant way was not explicit until Alibaba's acquisition of the Post. Joseph C. Tsai, Alibaba’s executive vice chairman, 
+[a href: 'https://www.nytimes.com/2015/12/12/business/dealbook/alibaba-scmp-south-china-morning-post.html'] said
+[/a] that Alibaba "wanted to use the paper to counteract the negative portrayal of China in the western media".
+
+Although Jack Ma has 
+[a href: 'https://fr.reuters.com/article/us-alibaba-scmp-idUSKCN0XI08S'] promised
+[/a]  not to interfere in SCMP editorial decisions, SCMP's erosion of editorial independence has been the subject of stories by foreign publications: 
+[a href: 'https://www.nytimes.com/2018/03/31/world/asia/south-china-morning-post-hong-kong-alibaba.html'] *The New York Times* 
+[/a] referred to the SCMP as a 'newspaper on a mission to promote China's soft power" in 2018, while 
+[a href: 'https://www.theatlantic.com/international/archive/2020/08/scmp-hong-kong-china-media/614719/'] *The Atlantic* 
+[/a] called the Post a 'newsroom at the Edge of Autocracy' in 2020. 
 [/section]
 
+
+// introduce ratio data, scrolly starts here. 
 [data name:"ratio_data" source:"ratio_data.csv" /]
 [var name:"scrollerIndex" value:0 /]
 [Scroller currentStep:scrollerIndex]
@@ -32,15 +56,17 @@ Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil e
   [/Graphic]
 
   [Step]
-  ### This chart shows the ratio of SCMP news articles written about China versus Hong Kong from 2012 - 2015. 
+  ### This chart shows the ratio of SCMP news articles written about China to Hong Kong from 2012 - 2015. 
   ### The ratio hovers around 0.5 in this time period, meaning that for every 1 story written by SCMP about China, SCMP produced 2 articles about Hong Kong. [/Step]
   [Step]### Alibaba acquired SCMP in 2016. There was no noticable difference in the volume of stories written about China compared to Hong Kong as the ratio was consistent with previous years. [/Step]
   [Step]### The next full year since Alibaba's acquition, the number of China stories from the SCMP rose significantly. [/Step]
-  [Step]### From 2017 - 2020, the ratio of news articles written about China versus Hong Kong is around 0.7. 
-  ### This means that SCMP wrote 7 news articles about China for every 10 news articles written about Hong Kong.  [/Step]
-  [Step]### The trend holds continues to hold until today. The SCMP is shifting more of its editorial content production on China than Hong Kong.[/Step]
-  [Step]### Placeholder[/Step]
-[/Scroller]
+  [Step]### From 2017 - 2019, the ratio of news articles written about China to Hong Kong is around 0.7. 
+  [/Step]
+  [Step]### This means that SCMP wrote 7 news articles about China for every 10 news articles written about Hong Kong. The increasing ratio trend continues to hold until today. [/Step]
+  [Step]###  This year, the ratio of China to Hong Kong bews stories produced by SCMP is at an all-time high. 
+  
+  ### SCMP has shifted and continues to shift more of its editorial content production on China since Alibaba's acquistion in 2016. [/Step]
+[/Scroller] // end scrollie
 
 
 [section className:"article-body"]
@@ -51,17 +77,13 @@ Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil e
 Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
  
 Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
-
-  [var name:"myVar" value:10 /]
-  [Range value:myVar min:0 max:100 /]
-  [Display value:myVar /]
-
 [/section]
 
+
+// intro tags data, line chart interactive.
 [data name:"tagged_data" source:"tagged_data.json" /]
 [var name:"scrollerIndex1" value:0 /]
 [Graphic fullWidth:true style:`{padding: 0}`]
-
   [d3TagsLineChart data:tagged_data/]
 [/Graphic]
 

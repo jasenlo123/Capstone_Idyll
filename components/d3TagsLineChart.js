@@ -2,11 +2,11 @@ const React = require('react');
 const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 
-const height = window.innerHeight-50;
+const height = window.innerHeight-100;
 const width = window.innerWidth;
 const margin = ({top: 50, right: 50, bottom: 50, left: 50})
 const caption_text = "Topic Tag Frequencies for SCMP News Articles "
-const parser = d3.timeParse("%Y")
+const parser = d3.timeParse("%Y, %m")
 
 class RatioLineChart extends D3Component {
   initialize(node, props) {
