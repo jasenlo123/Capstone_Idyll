@@ -22,11 +22,10 @@ class RatioLineChart extends D3Component {
 
     const y = d3.scaleLinear()
       .domain([0, d3.max(data.series, d => d3.max(d.values))]).nice()
-      //.domain([0, 10000]).nice()
       .range([height - margin.bottom, margin.top])
 
     const x = d3.scaleTime()
-    .domain([new Date("2012"), new Date("2019")])
+    .domain([new Date("2012"), new Date("2020")])
     .range([margin.left, width - margin.right])  
 
 
@@ -77,9 +76,9 @@ class RatioLineChart extends D3Component {
           .attr("r", 2.5);
     
       dot.append("text")
-          .style("font", "10px sans-serif")
+          .style("font", "20px sans-serif")
           .attr("text-anchor", "middle")
-          .attr("y", -8);
+          .attr("y", -10);
     
       function moved() {
         d3.event.preventDefault();
