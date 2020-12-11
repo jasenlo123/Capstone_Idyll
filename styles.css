@@ -28,6 +28,13 @@ p, .article-body {
   line-height: 2rem;
 }
 
+li {
+  width: 200%;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
 .article {
   max-width: 90vw;
   margin: 0 auto;
@@ -126,11 +133,10 @@ a tspan {
   margin-bottom: 50px;
 }
 
-.quote .attribution {
+.attribution {
   font-family: 'et-book';
   font-size: 1.2rem;
   font-weight: bold;
-
 }
 
 pre {
@@ -170,6 +176,7 @@ input {
   margin-right: -140%;
 }
 
+
 .viz_options {
   margin-left: 100px;
 }
@@ -177,11 +184,16 @@ input {
 .ReactTable{
   margin-top: 2vh;
   margin-bottom: 2vh;
+  font-size: 0.8rem;
 
 }
 
 .ReactTable table {
   margin-left: 10vw;
+}
+
+#idyll-scroll-0 { 
+  margin-top: 2vh
 }
 
 .caption {
