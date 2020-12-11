@@ -99,7 +99,7 @@ The metric that is used as a proxy for editorial priority on China versus Hong K
 [br/]
 // equation for derive metric
 [Equation]
-  \text{China:HK Ratio} = \dfrac{\text{Number of China Articles}}{\text{Number of HK Articles}}
+  \text{China:HK Ratio} = {\text{Number of China Articles}} / {\text{Number of HK Articles}}
 [/Equation]
 
 [/section]
