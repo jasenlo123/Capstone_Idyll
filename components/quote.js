@@ -25,7 +25,7 @@ class Quote extends React.PureComponent {
     }
     this.interval = setInterval(() => {
       this.updateQuote();
-    }, 8000);
+    }, 6000);
   }
 
   formatText(text) {

@@ -5,7 +5,8 @@ html {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 120%;
+  box-shadow: 3px 3px 2px steelblue;
 }
 
 body {
@@ -284,4 +285,44 @@ input {
     display: none;
   }
 
+}
+
+
+
+
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: steelblue;
+}
+
+.tooltip {
+  max-width: 300px;
+  max-height: 200px;
+  margin-top: 85vh;
+  padding: 4px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: absolute;
+  background-color: white;
+  font-size: 1.5rem;
+  pointer-events: none;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.tooltip div {
+  margin: 3px 0;
+}
+
+.tooltip-date, .tooltip-likes {
+  font-weight: bold;
 }

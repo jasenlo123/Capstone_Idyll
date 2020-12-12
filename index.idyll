@@ -2,8 +2,8 @@
 
 [Header
   fullWidth:true
-  title:"How is the South China Morning Post Different Nowadays? "
-  subtitle:"A data-driven investigation into how Alibaba's 2016 acquistion of Hong Kong's newspaper of record has changed the SCMP"
+  title:"Is the South China Morning Post Softer on China Nowadays?"
+  subtitle:"A data-driven investigation into how Alibaba's 2016 acquisition of Hong Kong's newspaper of record has changed SCMP's coverage of China"
   author:"Jasen Lo"
   authorLink:"https://idyll-lang.org"
   date:`(new Date()).toDateString()`
@@ -11,7 +11,7 @@
 
 
 [section className:"article-body"]
-[p className:'hed']Introduction & Summary[/p]
+[div className:'hed']Introduction[/div]
 Jack Ma's Alibaba Group acquired the South China Morning Post (SCMP) is an award-winning English-language newspaper based in Hong Kong in April 2016, hoping to use SCMP to counter negative coverage of China in the media landscape. Detractors of the SCMP's new editorial direction concerned about the editorial independence of the Post have levied the following accusations against the publication:
 
 // aside gif of the scmp newsroom, investigate copyright sigh.
@@ -23,13 +23,14 @@ Jack Ma's Alibaba Group acquired the South China Morning Post (SCMP) is an award
 
 * SCMP is shifting its editorial focus from producing content about Hong Kong to writing more about news on China.
 
-* SCMP's coverage of China after the acquisition is much less critical, as news stories about China have a more positive tone compared to the coverage produced before the acquisition.
+* SCMP's coverage of China after the Alibaba acquisition is much less critical, as news stories about China have a more positive tone compared to the coverage produced before the acquisition.
 
-This article investigates these two accusations using natural language processing and machine learning methods. The author scraped all of SCMP's 92,000 news articles from 2012 - 2020, and analyses the title and topic tags of these articles to quantitatively determine if these accusations are valid. To summarise, this article found that SCMP has shifted more of its editorial focus to China, writing much more about China following Alibaba's acquisition. In addition, the China coverage of SCMP has significantly softened in tone, as a sentiment analysis of SCMP's articles about China reveal a much more positive sentiment in article titles following the Alibaba's acquisition.
+This article investigates these two accusations using natural language processing and machine learning methods. The author scraped all of SCMP's 92,000 news articles from 2012 - 2020, and analyses the title and topic tags of these articles to quantitatively determine if SCMP's coverage of China after the acqusition is much less critical, as news stories about China have a more positive tone compared to the coverage produced before the acquisition.these accusations are valid. 
+
 [/section]
 
 [section className:"article-body"]
-[p className:'hed']Context & History of SCMP[/p]
+[div className:'hed']Context & History of SCMP[/div]
 The *South China Morning Post* (SCMP) is an award-winning English-language newspaper based in Hong Kong. SCMP has a storied history as one of the most influential newspapers in Asia. It was not only the paper of record for Hong Kong, but also the English-language paper of record for reporting on China.
 
 // intro quotes data, aside for quote display component
@@ -54,8 +55,8 @@ changed hands twice
 
 // SCMP's mission
 [br/]
-[p className:'hed' ]"Lead the global conversation about China"[/p]
-[p className:'dek']SCMP's current mission according to their [a href: 'https://corp.scmp.com/about-us/' target:"_blank"]website. [/a] [/p]
+[div className:'hed' ]"Lead the global conversation about China"[/div]
+[div className:'dek']SCMP's current mission according to their [a href: 'https://corp.scmp.com/about-us/' target:"_blank"]website. [/a] [/div]
 [br/]
 
 Following Kerry Group's acquisition, 
@@ -76,9 +77,12 @@ Although Jack Ma has
 [/a] called the Post a 'newsroom at the Edge of Autocracy' in 2020. 
 [/section]
 
+
+
+// Section 2 starts here.
+[section className:"article-body"]
 // sample data table
 [Aside]
-  [br/]
   [br/]
   [br/]
   [br/]
@@ -87,23 +91,24 @@ Although Jack Ma has
   [br/]
   [div className:'attribution'] This table shows some sample data for the articles that inform this chart below. An article is considered to be about Hong Kong or China if the URL of the article contains a *china* or a *hong-kong* tag. [/div]
 [/Aside]
+[div className:'hed']Shifting Editorial Priorities[/div]
 
-// Section 2 starts here.
-[section className:"article-body"]
-[p className:'hed']Shifting Editorial Priorities[/p]
-
-Former SCMP contributor Stephen Vines noted in a 2018 opt-ed for the Hong Kong Free Press, another English-language publication based in Hong Kong, that 'local news (about Hong Kong) has been largely removed from the main news section' of SCMP. Vines' claim seemed to be in-line with SCMP's new ownership to focus the publication's editorial focus onto China. Using the scraped SCMP dataset, the author was able to count the number of news articles that SCMP wrote about China and Hong Kong in order to quantify the effect that Vines hinted at in his opt-ed. 
+Former SCMP contributor Stephen Vines noted in a 2018 [a href:'https://hongkongfp.com/2018/11/13/i-will-no-longer-write-south-china-morning-post/' target:"_blank"] op-ed
+[/a] for the Hong Kong Free Press (HKFP), another English-language publication based in Hong Kong, that 'local news (about Hong Kong) has been largely removed from the main news section' of SCMP. Vines' claim seemed to be in-line with SCMP's new ownership to focus the publication's editorial focus onto China. Using the scraped SCMP dataset, the author was able to count the number of news articles that SCMP wrote about China and Hong Kong in order to quantify the effect that Vines hinted at in his opt-ed. 
 
 The metric that is used as a proxy for editorial priority on China versus Hong Kong is the ratio between the number of yearly articles written on China and the number of yearly articles written on Hong Kong. 
 [br/]
 [br/]
 // equation for derive metric
 [Equation]
-  \text{China:HK Ratio} = {\text{Number of China Articles}} / {\text{Number of HK Articles}}
+  \text{China:HK Ratio} = {\text{Number of China Articles / }}  {\text{Number of HK Articles}}
 [/Equation]
+[br/]
+[br/]
+[br/]
+This analysis finds that SCMP has shifted and continues to shift more of its editorial content production on China since Alibaba's acquisition in April, 2016. **SCMP produced 2 more articles about China for every 10 articles about Hong Kong following the Alibaba acquisition.**
 
 [/section]
-
 
 // introduce ratio data, scrolly starts here. 
 [data name:"ratio_data" source:"ratio_data.csv" /]
@@ -115,45 +120,75 @@ The metric that is used as a proxy for editorial priority on China versus Hong K
   [/Graphic]
 
   [Step]
-  ### This chart shows the ratio of SCMP news articles written about China to Hong Kong from 2012 - 2015. 
-  ### The ratio hovers around 0.5 in this time period, meaning that for every 5 story written by SCMP about China, SCMP produced approximately 10 articles about Hong Kong. [/Step]
-  [Step]### Alibaba acquired SCMP for $266 million in April, 2016, transfering control of SCMP from Malaysian tycoon Robert Kuok to Chinese billionaire Jack Ma. [/Step]
-  [Step]### In the next full year (2017) after Alibaba's acqusition of SCMP, the ratio of stories written about China compared to Hong Kong increases substantially.  [/Step]
-  [Step]### From 2017 - 2019, the ratio of news articles written about China to Hong Kong is around 0.7. This means that SCMP wrote 7 news articles about China for every 10 news articles written about Hong Kong. [/Step]
-  [Step]### The increasing ratio trend continues to hold until today.[/Step]
-  [Step]###  This year, the ratio of China to Hong Kong news stories produced by SCMP is at an all-time high. [/Step]
+  #### This chart shows the ratio of SCMP news articles written about China to Hong Kong from 2012 - 2015. 
+  #### The ratio hovers around 0.5 in this time period, meaning that for every 5 story written by SCMP about China, SCMP produced approximately 10 articles or twice as many articles about Hong Kong. [/Step]
+  [Step]#### Alibaba acquired SCMP for $266 million in April, 2016, transfering control of SCMP from Malaysian tycoon Robert Kuok to Chinese billionaire Jack Ma. [/Step]
+  [Step]#### In the next full year (2017) after Alibaba's acqusition of SCMP, the ratio of stories written about China compared to Hong Kong increases substantially.  [/Step]
+  [Step]#### From 2017 - 2019, the ratio of news articles written about China to Hong Kong is around 0.7. This means that SCMP wrote 7 news articles about China for every 10 news articles written about Hong Kong. [/Step]
+  [Step]#### The increasing ratio trend continues to hold until today.[/Step]
+  [Step]####  This year, the ratio of China to Hong Kong news stories produced by SCMP is at an all-time high. 
+   [/Step]
 [/Scroller] // end scrollie
 
 [section className:"article-body"]
-The visualisation above demonstrates that SCMP has shifted and continues to shift more of its editorial content production on China since Alibaba's acquisition in April, 2016. SCMP produced 2 more articles about China for every 10 articles about Hong Kong following the Alibaba acquisition.
+[div className:'hed']A Friendly Tone on China?[/div]
+
+[Aside]
+  ![screenshot](static/images/screenshot.jpg)
+  [br/]
+  [div className:'attribution'] The SCMP homepage on November 12, 2018. Screenshot taken by Stephen Vines, who used this homepage as evidence of SCMP coverage of China that was less critical and instead much more conciliatory in his 2018 HKFP [a href:'https://hongkongfp.com/2018/11/13/i-will-no-longer-write-south-china-morning-post/' target:"_blank"] op-ed
+  [/a].
+ [/div]
+[/Aside]
+
+
+
+According to the [a href:'http://ccpos.com.cuhk.edu.hk/wp-content/uploads/2020/07/Public-Evaluation-on-Media-Credibility-ENG.pdf' target:"_blank"] public survey on media credibility [/a] conducted by the Centre for Communication and Public Opinion Survey at the Chinese University of Hong Kong, SCMP received the highest credibility score among the various paid newspapers in Hong Kong in 2016. However, the 2019 survey results in 2019 revealed that SCMP's credibility score dropped significantly, reflective of public concern and perception that SCMP is no longer editorially independent enough. Having identified a significant shift of SCMP's editorial priority to coverage on China following the acquisition, this section aims to investigate whether the SCMP's coverage of China has become less critical of China. 
+
+ 
+The author uses machine learning to classify the approximately 32,000 SCMP articles written about China from 2012 to 2020. Using [a href:'https://arxiv.org/abs/1810.04805' target:"_blank"]deep learning model BERT[/a], the author classified the articles into articles with positive or negative sentiment. Articles with a higher sentiment score reflect articles that the model classified to have a more positive connotation, while articles with a low sentiment score were classfied as articles with negative connotation.
+
+[br/]
+[Equation]
+  \text{Sentiment Score} = [0 , 1]
+[/Equation]
+[Equation]
+  1 \rightarrow \text{Article Has Positive Connotation}
+[/Equation]
+[Equation]
+  0 \rightarrow \text{Article Has Negative Connotation}
+[/Equation]
+[br/]
+[br/]
+
+Interestingly, **the model did not find a quantitative difference in news sentiment before and after Alibaba's acquisition**. However, the model was able to identify stretches of bad news cycles for China, as the various troughs of the monthly sentiment score reflect events such as China's [a href:'https://www.scmp.com/coronavirus' target:"_blank"] Covid-19 [/a] breakout in the start of 2020, or the start of the [a href:'https://www.scmp.com/topics/occupy-central' target:"_blank"] Umbrella Movement [/a] in September, 2014. 
+
 [/section]
+
+//sentiment analysis graphic
+[data name:"sentiment_data" source:"china_sentiment_data.csv" /]
+[Graphic fullWidth:true style:`{padding: 0}`]
+    [d3SentimentLineChart data:sentiment_data/]
+[/Graphic]
+
 
 [section className:"article-body"]
-[p className:'hed']A Friendly Tone on China?[/p]
+[div className:'hed']Conclusions[/div]
+**To summarise, this article found that SCMP has shifted more of its editorial focus to China, writing much more about China following Alibaba's acquisition.  However, this article was did not observe a quantitatively difference in China coverage by SCMP as a sentiment analysis of SCMP's articles about China reveal that the sentiment score of SCMP articles about China remained approximately similar before and after Alibaba's acquisition.**
 
- 
-Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+It should be noted that there are multiple competing and mutually inclusive factors that could explain the findings of this investigation. 
 
-Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
- 
-Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
+1. Alibaba's leadership's comments on the motivations behind why they acquired SCMP suggests that it was the acquisition which likely prompted an increase the shift to more coverage on China. It seems likely that SCMP's new ownership has allowed SCMP journalists additional access to official sources or notable individuals or institutions that are more open to interviews from a news organisation with Chinese ownership. However, it is also entirely possible for that events in China were more newsworthy after 2016.
+2. Although a sentiment analysis found no substantive change in SCMP China articles before and after the acquisition, news sentiment might only be reflective of the type of news that SCMP is reporting, instead of the coverage style. On the other hand, it might have been the case that the SCMP was already covering China in a friendly way during the Kerry Group ownership of the paper, which might explain why the sentiment scores did not change much even after the acquisition.
+[br/]
+
+[div className:'hed']Methodology[/div]
+**under development**
+
 [/section]
-
 
 // intro tags data, line chart interactive.
 // [data name:"tagged_data" source:"tagged_data.json" /]
 // [Graphic fullWidth:true style:`{padding: 0}`]
 //  [d3TagsLineChart data:tagged_data/]
 // [/Graphic]
-
-
-[section className:"article-body"]
-Voluptate mollitia molestiae voluptas nihil amet dolorem accusantium qui ipsam. Autem facilis enim nostrum qui nostrum nihil. Et earum et ea cumque rerum. Accusantium quos veritatis molestiae minus dolor commodi.
- 
-Architecto ad blanditiis consectetur autem vitae et et. Et quis ipsa sed nihil ex occaecati libero nihil. Veniam et et ab commodi rerum in natus. Laborum quas velit dolor nisi et quod similique. Alias sequi occaecati et magnam laudantium aut blanditiis. Quidem facilis qui praesentium repudiandae nesciunt.
-[/section]
-
-[data name:"sentiment_data" source:"china_sentiment_data.csv" /]
-[Graphic fullWidth:true style:`{padding: 10}`]
-    [d3SentimentLineChart data:sentiment_data/]
-[/Graphic]
