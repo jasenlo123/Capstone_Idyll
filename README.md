@@ -1,6 +1,6 @@
 # Capstone - Front-End Web Development
 
-Hello! This repository contains the front-end web development code that is written using [Idyll](https://idyll-lang.org/), [d3.js](https://d3js.org/), and [React.js](https://reactjs.org/) frameworks, in addition to vanilla JS and CSS. Please review the following sections if you're curious about the different parts that make up this project!
+Hello! This repository contains the front-end web development code for this [interactive project](https://jasenlo123.github.io/Capstone_Idyll/) about the editorial shifts of the South China Morning Post following an acquistion by Alibaba in 2016. This web app is written using [Idyll](https://idyll-lang.org/), [d3.js](https://d3js.org/), and [React.js](https://reactjs.org/) frameworks, in addition to vanilla JS and CSS. Please review the following sections if you're curious about the different parts that make up this project!
 
 ## Where is the index.html? 
 This interactive uses Idyll-lang, a markup language and toolkit for writing interactive articles. Find out more about this awesome framework [here](https://idyll-lang.org/). Please view the ```index.idyll``` file to read the markdown text of this interactive. The build folder contains the actual ```index.html```, which is complied by Idyll similarly to how a typical React app is complied.
