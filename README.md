@@ -1,25 +1,10 @@
-# idyll-post
+# Capstone - Front-End Web Development
 
-Template for a single Idyll post.
+Hello! This repository contains the front-end web development code that is written using Idyll, d3.js, and React frameworks, in addition to vanilla JS and CSS. Please review the following sections if you're curious about the different parts that make up this project!
 
-## Installation
+## Components (D3 Visualisations + React)
+This folder contians the d3.js interactive charts that are featured in the piece. In addition, there is also a ```quote.js``` component which was written using React, which cycles through quotes that were made by relevant individuals.
 
-- Make sure you have `idyll` installed (`npm i -g idyll`).
-- Clone this repo and run `npm install`.
-
-## Developing a post locally
-
-Run `idyll`.
-
-## Building a post for production
-
-Run `idyll build`. The output will appear in the top-level `build` folder. To change the output location, change the `output` option in `package.json`.
-
-## Deploying
-
-Make sure your post has been built, then deploy the docs folder via any static hosting service.
-
-## Dependencies
-
-You can install custom dependencies by running `npm install <package-name> --save`. Note that any collaborators will also need download the package locally by running `npm install` after pulling the changes.
-# Capstone_Idyll
+## Data
+This folder contains all of the compiled data that is used in the interactive.
+1. 
